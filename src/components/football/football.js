@@ -15,15 +15,15 @@ function Football() {
     const newErrors = {};
 
     if (formData.teamAbbr.length !== 3) {
-      newErrors.teamAbbr = 'Team abbreviation must be exactly 3 characters';
+      newErrors.teamAbbr = 'Tên viết tắt phải có đúng 3 ký tự';
     }
 
     if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Full name is required';
+      newErrors.fullName = 'Họ và tên không được để trống';
     }
 
     if (!/^\d{8}$/.test(formData.studentId)) {
-      newErrors.studentId = 'Student ID must be exactly 8 digits';
+      newErrors.studentId = 'Mã số sinh viên phải có 8 chữ số';
     }
 
     setErrors(newErrors);
@@ -54,30 +54,30 @@ function Football() {
 
   return (
     <div className='football-registration'>
-      <h1>Football Registration</h1>
+      <h1>Thanh toán bộ môn Bóng Đá</h1>
       <div className='fee-info'>
-        <h3>Registration Fees</h3>
+        <h3>Bảng phí</h3>
         <div className='fee-details'>
-          <p>Participation Fee: 200,000 VND</p>
-          <p>Deposit Fee: 100,000 VND</p>
-          <p className='total'>Total: 300,000 VND</p>
+          <p>Phí tham gia: 200,000 VND</p>
+          <p>Phí bảo chứng: 100,000 VND</p>
+          <p className='total'>Tổng cộng: 300,000 VND</p>
         </div>
       </div>
       <form onSubmit={handleSubmit}>
         <div className='form-group'>
-          <label>Team Abbreviation (3 characters):</label>
+          <label>Tên viết tắt đội (3 ký tự):</label>
           <input type='text' name='teamAbbr' maxLength='3' value={formData.teamAbbr} onChange={handleChange} />
           {errors.teamAbbr && <span className='error'>{errors.teamAbbr}</span>}
         </div>
 
         <div className='form-group'>
-          <label>Full Name:</label>
+          <label>Họ và tên:</label>
           <input type='text' name='fullName' value={formData.fullName} onChange={handleChange} />
           {errors.fullName && <span className='error'>{errors.fullName}</span>}
         </div>
 
         <div className='form-group'>
-          <label>Student ID (8 digits):</label>
+          <label>Mã số sinh viên:</label>
           <input
             type='text'
             name='studentId'
@@ -89,7 +89,7 @@ function Football() {
           {errors.studentId && <span className='error'>{errors.studentId}</span>}
         </div>
 
-        <button type='submit'>Submit Registration</button>
+        <button type='submit'>Thanh toán</button>
       </form>
     </div>
   );

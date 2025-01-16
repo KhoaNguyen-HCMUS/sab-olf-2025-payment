@@ -19,13 +19,14 @@ function Payment() {
 
   return (
     <div className='payment-container'>
-      <h2>Payment Information</h2>
+      <h2>Thông tin chuyển khoản</h2>
       <div className='payment-details'>
-        <p>Amount: {parseInt(amount).toLocaleString('vi-VN')} VND</p>
+        <p>Số tiền: {parseInt(amount).toLocaleString('vi-VN')} VND</p>
         <p>
-          Content: SAB OLF {sportCode} {studentId} {teamAbbr}
+          Nội dung: SAB OLF {sportCode} {studentId} {teamAbbr}
         </p>
-		<p>Warning: Don't change content of transfer</p>
+        <p>Vui lòng không thay đổi nội dung chuyển khoản.</p>
+        <p>Khi chuyển khoản xong bạn có thể quay về form để tiếp tục đăng ký.</p>
       </div>
 
       <div className='qr-container'>
@@ -33,7 +34,7 @@ function Payment() {
       </div>
 
       <button onClick={() => navigate(-1)} className='back-button'>
-        Back to Registration
+        Chỉnh sửa thông tin.
       </button>
     </div>
   );

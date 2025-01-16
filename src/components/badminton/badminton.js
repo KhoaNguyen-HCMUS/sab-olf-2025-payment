@@ -66,7 +66,7 @@ function Badminton() {
 
   return (
     <div className='badminton-registration'>
-      <h1>Badminton Registration</h1>
+      <h1>Thanh toán bộ môn Cầu Lông</h1>
 
       <div className='play-type-selection'>
         <label>
@@ -77,7 +77,7 @@ function Badminton() {
             checked={playType === 'single'}
             onChange={(e) => setPlayType(e.target.value)}
           />{' '}
-          Single
+          Đánh đơn
         </label>
         <label>
           <input
@@ -87,22 +87,22 @@ function Badminton() {
             checked={playType === 'double'}
             onChange={(e) => setPlayType(e.target.value)}
           />{' '}
-          Double
+          Đánh Đôi
         </label>
       </div>
 
       <div className='fee-info'>
-        <h3>Registration Fees</h3>
+        <h3>Bảng phí</h3>
         <div className='fee-details'>
-          <p>Participation Fee: {getFees().participation.toLocaleString('vi-VN')} VND</p>
-          <p>Deposit Fee: {getFees().deposit.toLocaleString('vi-VN')} VND</p>
-          <p className='total'>Total: {getFees().total.toLocaleString('vi-VN')} VND</p>
+          <p>Phí tham gia: {getFees().participation.toLocaleString('vi-VN')} VND</p>
+          <p>Phí bảo chứng: {getFees().deposit.toLocaleString('vi-VN')} VND</p>
+          <p className='total'>Tổng cộng: {getFees().total.toLocaleString('vi-VN')} VND</p>
         </div>
       </div>
 
       <form onSubmit={handleSubmit}>
         <div className='form-group'>
-          <label>Full Name:</label>
+          <label>Họ và tên:</label>
           <input
             type='text'
             name='fullName'
@@ -113,7 +113,7 @@ function Badminton() {
         </div>
 
         <div className='form-group'>
-          <label>Student ID (8 digits):</label>
+          <label>Mã số sinh viên:</label>
           <input
             type='text'
             name='studentId'
@@ -127,7 +127,7 @@ function Badminton() {
         {playType === 'double' && (
           <>
             <div className='form-group'>
-              <label>Partner Name:</label>
+              <label>Họ tên đồng đội:</label>
               <input
                 type='text'
                 name='partnerName'
@@ -138,7 +138,7 @@ function Badminton() {
             </div>
 
             <div className='form-group'>
-              <label>Partner Student ID (8 digits):</label>
+              <label>Mã số sinh viên đồng đội:</label>
               <input
                 type='text'
                 name='partnerStudentId'
@@ -151,7 +151,7 @@ function Badminton() {
           </>
         )}
 
-        <button type='submit'>Submit Registration</button>
+        <button type='submit'>Thanh toán</button>
       </form>
     </div>
   );

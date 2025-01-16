@@ -22,19 +22,19 @@ function App() {
           path='/'
           element={
             <div className='App-header'>
-              <h1>Sports Registration Payment</h1>
+              <h1>Thanh toán Hội thao OLYMFIT 2025</h1>
               <div className='sport-buttons'>
                 <button className='sport-button badminton' onClick={() => handleSportClick('badminton')}>
-                  Badminton
+                  Cầu Lông
                 </button>
                 <button className='sport-button chess' onClick={() => handleSportClick('chess')}>
-                  Chess
+                  Cờ
                 </button>
                 <button className='sport-button football' onClick={() => handleSportClick('football')}>
-                  Football
+                  Bóng Đá
                 </button>
                 <button className='sport-button volleyball' onClick={() => handleSportClick('volleyball')}>
-                  Volleyball
+                  Bóng Chuyền
                 </button>
               </div>
             </div>

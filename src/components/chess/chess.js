@@ -15,11 +15,11 @@ function Chess() {
     const newErrors = {};
 
     if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Full name is required';
+      newErrors.fullName = 'Họ và tên không được để trống';
     }
 
     if (!/^\d{8}$/.test(formData.studentId)) {
-      newErrors.studentId = 'Student ID must be exactly 8 digits';
+      newErrors.studentId = 'Mã số sinh viên phải có 8 chữ số';
     }
 
     setErrors(newErrors);
@@ -41,19 +41,19 @@ function Chess() {
 
   return (
     <div className='chess-registration'>
-      <h1>Chess Registration</h1>
+      <h1>Thanh toán bộ môn Cờ</h1>
 
       <div className='fee-info'>
-        <h3>Registration Fees</h3>
+        <h3>Bảng phí</h3>
         <div className='fee-details'>
-          <p>Deposit Fee: 50,000 VND</p>
-          <p className='total'>Total: 50,000 VND</p>
+          <p>Phí bảo chứng: 50,000 VND</p>
+          <p className='total'>Tổng cộng: 50,000 VND</p>
         </div>
       </div>
 
       <form onSubmit={handleSubmit}>
         <div className='form-group'>
-          <label>Full Name:</label>
+          <label>Họ tên:</label>
           <input
             type='text'
             name='fullName'
@@ -64,7 +64,7 @@ function Chess() {
         </div>
 
         <div className='form-group'>
-          <label>Student ID (8 digits):</label>
+          <label>Mã số sinh viên:</label>
           <input
             type='text'
             name='studentId'
@@ -75,7 +75,7 @@ function Chess() {
           {errors.studentId && <span className='error'>{errors.studentId}</span>}
         </div>
 
-        <button type='submit'>Submit Registration</button>
+        <button type='submit'>Thanh toán</button>
       </form>
     </div>
   );

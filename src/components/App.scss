@@ -1,0 +1,37 @@
+.sport-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.sport-button {
+  padding: 20px 40px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: white;
+  font-weight: bold;
+}
+
+.sport-button:hover {
+  transform: scale(1.05);
+}
+
+.badminton{
+  background-color: #3498db;
+}
+
+.chess {
+  background-color: #e67e22;
+}
+
+.volleyball {
+  background-color: #2ecc71;
+}
+
+.football {
+  background-color: #e74c3c;
+}

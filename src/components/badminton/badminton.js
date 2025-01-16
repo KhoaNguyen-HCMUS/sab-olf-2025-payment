@@ -90,7 +90,7 @@ function Badminton() {
             checked={playType === 'double'}
             onChange={(e) => setPlayType(e.target.value)}
           />{' '}
-          Đánh Đôi
+          Đánh đôi
         </label>
       </div>
 

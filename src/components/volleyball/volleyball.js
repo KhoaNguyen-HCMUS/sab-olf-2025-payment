@@ -55,6 +55,9 @@ function Volleyball() {
 
   return (
     <div className='volleyball-registration'>
+      <button className='back-button' onClick={() => navigate('/')}>
+        ← Trở về
+      </button>
       <h1>Thanh toán bộ môn Bóng Chuyền</h1>
 
       <div className='fee-info'>

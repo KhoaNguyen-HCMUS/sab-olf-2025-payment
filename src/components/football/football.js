@@ -54,7 +54,11 @@ function Football() {
 
   return (
     <div className='football-registration'>
+      <button className='back-button' onClick={() => navigate('/')}>
+        ← Trở về
+      </button>
       <h1>Thanh toán bộ môn Bóng Đá</h1>
+
       <div className='fee-info'>
         <h3>Bảng phí</h3>
         <div className='fee-details'>

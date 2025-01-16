@@ -27,18 +27,18 @@ function Badminton() {
     const newErrors = {};
 
     if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Full name is required';
+      newErrors.fullName = 'Họ và tên không được để trống';
     }
     if (!/^\d{8}$/.test(formData.studentId)) {
-      newErrors.studentId = 'Student ID must be exactly 8 digits';
+      newErrors.studentId = 'Mã số sinh viên phải có 8 chữ số';
     }
 
     if (playType === 'double') {
       if (!formData.partnerName.trim()) {
-        newErrors.partnerName = 'Partner name is required';
+        newErrors.partnerName = 'Họ và tên đồng đội không được để trống';
       }
       if (!/^\d{8}$/.test(formData.partnerStudentId)) {
-        newErrors.partnerStudentId = 'Partner Student ID must be exactly 8 digits';
+        newErrors.partnerStudentId = 'Mã số sinh viên đồng đội phải có 8 chữ số';
       }
     }
 
@@ -66,6 +66,9 @@ function Badminton() {
 
   return (
     <div className='badminton-registration'>
+      <button className='back-button' onClick={() => navigate('/')}>
+        ← Trở về
+      </button>
       <h1>Thanh toán bộ môn Cầu Lông</h1>
 
       <div className='play-type-selection'>

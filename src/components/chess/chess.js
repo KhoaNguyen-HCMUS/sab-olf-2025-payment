@@ -41,6 +41,9 @@ function Chess() {
 
   return (
     <div className='chess-registration'>
+      <button className='back-button' onClick={() => navigate('/')}>
+        ← Trở về
+      </button>
       <h1>Thanh toán bộ môn Cờ</h1>
 
       <div className='fee-info'>

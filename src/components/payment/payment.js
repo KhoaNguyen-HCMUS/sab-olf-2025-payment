@@ -11,7 +11,8 @@ function Payment() {
   const ACCOUNT_NO = '2288119968';
 
   const generateQRCode = () => {
-    const transferContent = `SAB OLF ${sportCode} ${studentId} ${teamAbbr}`;
+    const shouldShowTeamAbbr = !['CHS', 'BMTa', 'BMTb'].includes(sportCode);
+    const transferContent = `SAB OLF ${sportCode} ${studentId}${shouldShowTeamAbbr ? ` ${teamAbbr}` : ''}`;
     return `https://api.vietqr.io/image/${BANK_ID}-${ACCOUNT_NO}-ttfzC3g.jpg?&amount=${amount}&addInfo=${encodeURIComponent(
       transferContent
     )}`;

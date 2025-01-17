@@ -14,10 +14,6 @@ function Chess() {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Họ và tên không được để trống';
-    }
-
     if (!/^\d{8}$/.test(formData.studentId)) {
       newErrors.studentId = 'Mã số sinh viên phải có 8 chữ số';
     }
@@ -55,17 +51,6 @@ function Chess() {
       </div>
 
       <form onSubmit={handleSubmit}>
-        <div className='form-group'>
-          <label>Họ tên:</label>
-          <input
-            type='text'
-            name='fullName'
-            value={formData.fullName}
-            onChange={(e) => setFormData((prev) => ({ ...prev, fullName: e.target.value }))}
-          />
-          {errors.fullName && <span className='error'>{errors.fullName}</span>}
-        </div>
-
         <div className='form-group'>
           <label>Mã số sinh viên:</label>
           <input

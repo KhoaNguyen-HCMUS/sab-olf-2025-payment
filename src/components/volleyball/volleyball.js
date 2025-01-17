@@ -19,10 +19,6 @@ function Volleyball() {
       newErrors.teamAbbr = 'Tên viết tắt phải có đúng 3 ký tự';
     }
 
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Họ và tên không được để trống';
-    }
-
     if (!/^\d{8}$/.test(formData.studentId)) {
       newErrors.studentId = 'Mã số sinh viên phải có 8 chữ số';
     }
@@ -74,12 +70,6 @@ function Volleyball() {
           <label>Tên viết tắt đội (3 ký tự):</label>
           <input type='text' name='teamAbbr' value={formData.teamAbbr} onChange={handleChange} maxLength='3' />
           {errors.teamAbbr && <span className='error'>{errors.teamAbbr}</span>}
-        </div>
-
-        <div className='form-group'>
-          <label>Họ và tên:</label>
-          <input type='text' name='fullName' value={formData.fullName} onChange={handleChange} />
-          {errors.fullName && <span className='error'>{errors.fullName}</span>}
         </div>
 
         <div className='form-group'>

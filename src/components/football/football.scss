@@ -49,9 +49,13 @@
   }
 
   form {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+
     .form-group {
-      margin-bottom: 15px;
-      margin-right: 25px;
+      width: 100%;
+      margin-bottom: 1.5rem;
       label {
         display: block;
         margin-bottom: 5px;
@@ -63,6 +67,8 @@
         padding: 12px;
         border: 1px solid #ccc;
         border-radius: 5px;
+        max-width: 100%;
+        box-sizing: border-box;
       }
 
       .error {

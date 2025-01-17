@@ -26,17 +26,11 @@ function Badminton() {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Họ và tên không được để trống';
-    }
     if (!/^\d{8}$/.test(formData.studentId)) {
       newErrors.studentId = 'Mã số sinh viên phải có 8 chữ số';
     }
 
     if (playType === 'double') {
-      if (!formData.partnerName.trim()) {
-        newErrors.partnerName = 'Họ và tên đồng đội không được để trống';
-      }
       if (!/^\d{8}$/.test(formData.partnerStudentId)) {
         newErrors.partnerStudentId = 'Mã số sinh viên đồng đội phải có 8 chữ số';
       }
@@ -105,17 +99,6 @@ function Badminton() {
 
       <form onSubmit={handleSubmit}>
         <div className='form-group'>
-          <label>Họ và tên:</label>
-          <input
-            type='text'
-            name='fullName'
-            value={formData.fullName}
-            onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-          />
-          {errors.fullName && <span className='error'>{errors.fullName}</span>}
-        </div>
-
-        <div className='form-group'>
           <label>Mã số sinh viên:</label>
           <input
             type='text'
@@ -129,17 +112,6 @@ function Badminton() {
 
         {playType === 'double' && (
           <>
-            <div className='form-group'>
-              <label>Họ tên đồng đội:</label>
-              <input
-                type='text'
-                name='partnerName'
-                value={formData.partnerName}
-                onChange={(e) => setFormData({ ...formData, partnerName: e.target.value })}
-              />
-              {errors.partnerName && <span className='error'>{errors.partnerName}</span>}
-            </div>
-
             <div className='form-group'>
               <label>Mã số sinh viên đồng đội:</label>
               <input

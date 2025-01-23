@@ -73,7 +73,7 @@ function Volleyball() {
         </div>
 
         <div className='form-group'>
-          <label>Mã số sinh viên:</label>
+          <label>MSSV (là MSSV của người đại diện điền form):</label>
           <input type='text' name='studentId' value={formData.studentId} onChange={handleChange} maxLength='8' />
           {errors.studentId && <span className='error'>{errors.studentId}</span>}
         </div>

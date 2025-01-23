@@ -72,7 +72,7 @@ function Football() {
         </div>
 
         <div className='form-group'>
-          <label>Mã số sinh viên:</label>
+          <label>MSSV (là MSSV của người đại diện điền form):</label>
           <input
             type='text'
             name='studentId'

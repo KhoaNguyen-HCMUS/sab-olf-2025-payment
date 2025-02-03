@@ -27,7 +27,7 @@ function Payment() {
           Nội dung: SAB OLF {sportCode} {studentId} {teamAbbr}
         </p>
         <p>Vui lòng không thay đổi nội dung chuyển khoản.</p>
-        <p>Khi chuyển khoản xong bạn có thể quay về form để tiếp tục đăng ký.</p>
+        <p>Khi chuyển khoản xong bạn cần quay về form để tiếp tục đăng ký.</p>
       </div>
 
       <div className='qr-container'>

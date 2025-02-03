@@ -30,9 +30,9 @@ function App() {
                 <button className='sport-button chess' onClick={() => handleSportClick('chess')}>
                   Cờ
                 </button>
-                <button className='sport-button football' onClick={() => handleSportClick('football')}>
+                {/* <button className='sport-button football' onClick={() => handleSportClick('football')}>
                   Bóng Đá
-                </button>
+                </button> */}
                 <button className='sport-button volleyball' onClick={() => handleSportClick('volleyball')}>
                   Bóng Chuyền
                 </button>
@@ -43,7 +43,7 @@ function App() {
         <Route path='/chess' element={<Chess />} />
         <Route path='/badminton' element={<Badmintion />} />
         <Route path='/volleyball' element={<Volleyball />} />
-        <Route path='/football' element={<Football />} />
+        {/* <Route path='/football' element={<Football />} /> */}
         <Route path='/payment' element={<Payment />} />
       </Routes>
     </div>
